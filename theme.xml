@@ -17,12 +17,42 @@ license:       creative commons CC-BY-NC-SA
       <themeCustomizationsPath>${distributionPath}theme-customizations/art-book-next-rgarc-stock/</themeCustomizationsPath>
    </variables>
 
+   <!-- Color Scheme -->
+   <subset name="color-scheme" displayName="Color Scheme">
+      <include name="default" displayName="Default"/>
+      <include name="light" displayName="Light"/>
+      <include name="steam-os" displayName="Steam OS"/>
+      <include name="snes" displayName="SNES"/>
+      <include name="famicom" displayName="Famicom"/>
+      <include name="black" displayName="Black"/>
+      <include name="grayscale" displayName="Grayscale"/>
+      <include name="custom" displayName="Custom" />
+   </subset>
+   <include>./colors.xml</include>
+   <include ifSubset="color-scheme:custom">${themeCustomizationsPath}colors.xml</include>
+
+   <!-- System View Style -->
+   <subset name="system-view-style" displayName="System View: Style">
+      <include name="centered" displayName="Centered Artwork (Multiple Logos)" />
+      <include name="centered-one-logo" displayName="Centered Artwork (Single Logo)" />
+   </subset>
+
+   <!--
+   ///
+   Subset: Splash Screen
+   ///
+   -->
+   <subset name="splash-screen" displayName="Splash screen">
+      <include name="default" displayName="Default" />
+      <include name="custom" displayName="Custom" />
+   </subset>
+
    <!--
    ///
    Subset: System Count
    ///
    -->
-   <subset name="system-count" displayName="System Count">
+   <subset name="system-count" displayName="System game count">
       <include name="on" displayName="On" />
       <include name="off" displayName="Off" />
    </subset>
@@ -37,46 +67,24 @@ license:       creative commons CC-BY-NC-SA
       <include name="off" displayName="Off" />
    </subset>
 
-   <!-- Color Scheme -->
-   <include>./colors.xml</include>
-   <subset name="color-scheme" displayName="Color Scheme">
-      <include name="art-book-next" displayName="Art Book Next">./_inc/colors/art-book-next.xml</include>
-      <include name="art-book" displayName="Art Book">./_inc/colors/art-book.xml</include>
-      <include name="steam-os" displayName="Steam OS">./_inc/colors/steam-os.xml</include>
-      <include name="snes" displayName="SNES">./_inc/colors/snes.xml</include>
-      <include name="famicom" displayName="Famicom">./_inc/colors/famicom.xml</include>
-      <include name="black" displayName="Black">./_inc/colors/black.xml</include>
-      <include name="grayscale" displayName="Grayscale">./_inc/colors/grayscale.xml</include>
-   </subset>
-
-   <!-- Fonts -->
-   <subset name="fonts" displayName="Font Size">
-      <include name="default" displayName="Default" />
-      <include name="custom" displayName="Custom" />
-   </subset>
-
-   <!-- System View Style -->
-   <subset name="system-view-style" displayName="System View: Style">
-      <include name="centered" displayName="Centered Artwork (Multiple Logos)" />
-      <include name="centered-one-logo" displayName="Centered Artwork (Single Logo)" />
-   </subset>
-
    <!--
    ///
-   Subset: Splash Screen
+   Subset: Show controller activity
    ///
    -->
-   <subset name="splash-screen" displayName="Splash Screen">
-      <include name="default" displayName="Default" />
-      <include name="custom" displayName="Custom" />
+   <subset name="show-controller-activity" displayName="Show controller activity">
+      <include name="on" displayName="On" />
+      <include name="off" displayName="Off" />
    </subset>
 
    <!-- Gamelist View Loop Video -->
+   <!--
+   Video doesn't work on stock firmware for some reason
    <subset name="gamelist-loop-video" displayName="Gamelist View: Loop Video">
       <include name="off" displayName="Off" />
       <include name="on" displayName="On" />
    </subset>
-
+   -->
 
    <!-- Help -->
    <view name="system,basic,detailed,video">
@@ -93,20 +101,23 @@ license:       creative commons CC-BY-NC-SA
    </view>
 
    <view name="screen">
-      <controllerActivity name="controllerActivity">
-         <visible>false</visible>
-      </controllerActivity>
       <text name="clock">
-         <pos>1 1</pos>
-         <size>0.4 0.07</size>
-         <fontSize>0.04</fontSize>
-         <alignment>right</alignment>
+         <pos>0.0125 0.0125</pos><!-- 8 8 -->
+         <size>0.4 0.05</size>
+         <textColor>eeeeee77</textColor>
+         <fontSize>0.03</fontSize>
+         <alignment>left</alignment>
          <verticalAlignment>center</verticalAlignment>
          <color>${statusBarIconColor}</color>
       </text>
-      <batteryIndicator name="batteryIndicator">
+      <controllerActivity name="controllerActivity">
+         <pos>0.80 0.01875</pos>
+         <size>0.04375 0.04375</size>
+         <imagePath>./_inc/images/menu-icon-controller.svg</imagePath>
          <color>${statusBarIconColor}</color>
-         
+         <visible ifSubset="show-controller-activity:off">false</visible>
+      </controllerActivity>
+      <batteryIndicator name="batteryIndicator">
          <full>./_inc/images/battery-100-vertical.svg</full>
          <at75>./_inc/images/battery-75-vertical.svg</at75>
          <at50>./_inc/images/battery-50-vertical.svg</at50>
@@ -114,6 +125,12 @@ license:       creative commons CC-BY-NC-SA
          <empty>./_inc/images/battery-0-vertical.svg</empty>
          <incharge>./_inc/images/battery-charging-vertical.svg</incharge>
          <networkIcon>./_inc/images/wifi-vertical.svg</networkIcon>
+
+         <pos>0 0.0125</pos><!-- 0 8 -->
+         <size>1 0.05</size><!-- 640 32 -->
+         <itemSpacing>0.0125</itemSpacing>
+         <horizontalAlignment>right</horizontalAlignment>
+         <color>${statusBarIconColor}</color>
       </batteryIndicator>
    </view>
 
@@ -143,18 +160,35 @@ license:       creative commons CC-BY-NC-SA
       <image name="logo">
          <color>${systemLogoColor}</color>
       </image>
-      <text name="logoText">
+      <text name="system-name" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <maxSize>0.7 0.5</maxSize>
          <color>${systemLogoColor}</color>
          <fontSize>0.15</fontSize>
+         <zIndex>50</zIndex>
+         <text>${system.fullName}</text>
+         <!-- TODO: Stock OS ES do not support bindings -->
+         <!-- <visible>!exists("${themePath}/_inc/systems/" + {system:theme} + ".svg")</visible> -->
+         <visible>false</visible>
       </text>
+      <image name="syslogo" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <maxSize>0.7 0.5</maxSize>
+         <zIndex>50</zIndex>
+         <color>${systemLogoColor}</color>
+         <path>./_inc/systems/${system.theme}.svg</path>
+      </image>
       <carousel name="systemcarousel">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
          <color>00000000</color>
          <type>horizontal</type>
-         <logoScale>2</logoScale>
-         <logoSize>0.25 0.15</logoSize>
+         <logoScale>1.3</logoScale>
+         <logoSize>1 1.06</logoSize>
+         <scaledLogoSpacing>0.4</scaledLogoSpacing>
          <maxLogoCount>4</maxLogoCount>
          <maxLogoCount ifSubset="system-view-style:centered-one-logo">1</maxLogoCount>
          <scrollSound>./_inc/sounds/scroll.wav</scrollSound>

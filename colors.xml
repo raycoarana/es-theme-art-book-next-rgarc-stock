@@ -1,6 +1,6 @@
 <theme>
    <formatVersion>7</formatVersion>
-   <variables ifSubset="color-scheme:art-book-next|custom">
+   <variables ifSubset="color-scheme:default|custom">
       <backgroundColor>000000</backgroundColor>
       <!-- System View -->
       <systemBackgroundColor>111111</systemBackgroundColor>
@@ -27,7 +27,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>111111</statusBarBackgroundColor>
-      <statusBarIconColor>eeeeee</statusBarIconColor>
+      <statusBarIconColor>ffffff</statusBarIconColor>
       <!-- Splash Screen -->
       <splashBackgroundColor>000000</splashBackgroundColor>
       <splashProgressBarColor>222222</splashProgressBarColor>
@@ -36,7 +36,7 @@
       <splashProgressBarActiveColorEnd>666666</splashProgressBarActiveColorEnd>
       <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
-   <variables ifSubset="color-scheme:art-book">
+   <variables ifSubset="color-scheme:light">
       <backgroundColor>000000</backgroundColor>
       <!-- System View -->
       <systemBackgroundColor>111111</systemBackgroundColor>
@@ -57,13 +57,20 @@
       <gamelistListDescriptionColor>000000dd</gamelistListDescriptionColor>
       <gamelistListRatingColor>00000055</gamelistListRatingColor>
       <!-- Help System -->
-      <helpBackgroundColor>000000</helpBackgroundColor>
-      <helpIconColor>ffffff66</helpIconColor>
-      <helpTextColor>ffffff66</helpTextColor>
+      <helpBackgroundColor>070707</helpBackgroundColor>
+      <helpIconColor>ffffff88</helpIconColor>
+      <helpTextColor>ffffffaa</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>111111</statusBarBackgroundColor>
       <statusBarIconColor>eeeeee</statusBarIconColor>
+      <!-- Splash Screen -->
+      <splashBackgroundColor>000000</splashBackgroundColor>
+      <splashProgressBarColor>222222</splashProgressBarColor>
+      <splashProgressBarColorEnd>222222</splashProgressBarColorEnd>
+      <splashProgressBarActiveColor>666666</splashProgressBarActiveColor>
+      <splashProgressBarActiveColorEnd>666666</splashProgressBarActiveColorEnd>
+      <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
    <variables ifSubset="color-scheme:steam-os">
       <backgroundColor>000000</backgroundColor>
@@ -93,6 +100,13 @@
       <menuBackgroundColor>0D141C</menuBackgroundColor>
       <statusBarBackgroundColor>0D141C</statusBarBackgroundColor>
       <statusBarIconColor>eeeeee</statusBarIconColor>
+      <!-- Splash Screen -->
+      <splashBackgroundColor>0D141C</splashBackgroundColor>
+      <splashProgressBarColor>222222</splashProgressBarColor>
+      <splashProgressBarColorEnd>222222</splashProgressBarColorEnd>
+      <splashProgressBarActiveColor>666666</splashProgressBarActiveColor>
+      <splashProgressBarActiveColorEnd>666666</splashProgressBarActiveColorEnd>
+      <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
    <variables ifSubset="color-scheme:snes">
       <backgroundColor>000000</backgroundColor>
@@ -122,6 +136,13 @@
       <menuBackgroundColor>231942</menuBackgroundColor>
       <statusBarBackgroundColor>231942</statusBarBackgroundColor>
       <statusBarIconColor>eeeeee</statusBarIconColor>
+      <!-- Splash Screen -->
+      <splashBackgroundColor>231942</splashBackgroundColor>
+      <splashProgressBarColor>222222</splashProgressBarColor>
+      <splashProgressBarColorEnd>222222</splashProgressBarColorEnd>
+      <splashProgressBarActiveColor>333333</splashProgressBarActiveColor>
+      <splashProgressBarActiveColorEnd>333333</splashProgressBarActiveColorEnd>
+      <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
    <variables ifSubset="color-scheme:famicom">
       <backgroundColor>000000</backgroundColor>
@@ -151,6 +172,13 @@
       <menuBackgroundColor>711521</menuBackgroundColor>
       <statusBarBackgroundColor>711521</statusBarBackgroundColor>
       <statusBarIconColor>DCD6B6</statusBarIconColor>
+      <!-- Splash Screen -->
+      <splashBackgroundColor>711521</splashBackgroundColor>
+      <splashProgressBarColor>222222</splashProgressBarColor>
+      <splashProgressBarColorEnd>222222</splashProgressBarColorEnd>
+      <splashProgressBarActiveColor>333333</splashProgressBarActiveColor>
+      <splashProgressBarActiveColorEnd>333333</splashProgressBarActiveColorEnd>
+      <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
    <variables ifSubset="color-scheme:black">
       <backgroundColor>000000</backgroundColor>
@@ -180,6 +208,13 @@
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>000000</statusBarBackgroundColor>
       <statusBarIconColor>eeeeee</statusBarIconColor>
+      <!-- Splash Screen -->
+      <splashBackgroundColor>000000</splashBackgroundColor>
+      <splashProgressBarColor>222222</splashProgressBarColor>
+      <splashProgressBarColorEnd>222222</splashProgressBarColorEnd>
+      <splashProgressBarActiveColor>666666</splashProgressBarActiveColor>
+      <splashProgressBarActiveColorEnd>666666</splashProgressBarActiveColorEnd>
+      <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
    <variables ifSubset="color-scheme:grayscale">
       <backgroundColor>000000</backgroundColor>
@@ -209,5 +244,12 @@
       <menuBackgroundColor>777777</menuBackgroundColor>
       <statusBarBackgroundColor>777777</statusBarBackgroundColor>
       <statusBarIconColor>cccccc</statusBarIconColor>
+      <!-- Splash Screen -->
+      <splashBackgroundColor>777777</splashBackgroundColor>
+      <splashProgressBarColor>222222</splashProgressBarColor>
+      <splashProgressBarColorEnd>222222</splashProgressBarColorEnd>
+      <splashProgressBarActiveColor>666666</splashProgressBarActiveColor>
+      <splashProgressBarActiveColorEnd>666666</splashProgressBarActiveColorEnd>
+      <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
 </theme>

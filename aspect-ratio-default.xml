@@ -1,42 +1,5 @@
 <theme>
    <formatVersion>7</formatVersion>
-   <view name="screen">
-      <batteryIndicator name="batteryIndicator">
-         <pos>0 0.0125</pos><!-- 0 8 -->
-         <size>1 0.05</size><!-- 640 32 -->
-         <itemSpacing>0.0125</itemSpacing>
-         <horizontalAlignment>right</horizontalAlignment>
-      </batteryIndicator>
-      <text name="clock">
-         <pos>0.0125 0.0125</pos><!-- 8 8 -->
-         <size>0.4 0.05</size>
-         <textColor>eeeeee77</textColor>
-         <fontSize>0.03</fontSize>
-         <alignment>left</alignment>
-         <verticalAlignment>center</verticalAlignment>
-         <color>ffffff</color>
-      </text>
-   </view>
-
-   <view name="system">
-      <text name="logoText">
-         <fontSize>0.0875</fontSize><!-- 42 -->
-      </text>
-      <carousel name="systemcarousel">
-         <logoScale>1.3</logoScale>
-         <logoSize>1 1.06</logoSize>
-         <scaledLogoSpacing>0.4</scaledLogoSpacing>
-      </carousel>
-      <image name="syslogo" extra="true">
-         <origin>0.5 0.5</origin>
-         <pos>0.5 0.5</pos>
-         <maxSize>0.7 0.5</maxSize>
-         <zIndex>50</zIndex>
-         <color>${systemLogoColor}</color>
-         <path>./_inc/systems/${system.theme}.svg</path>
-      </image>
-   </view>
-
    <view name="basic,detailed,video">
       <image name="logo">
          <maxSize>0.359375 0.104166666666667</maxSize><!-- 230 50 -->
