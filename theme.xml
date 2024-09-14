@@ -36,6 +36,17 @@ license:       creative commons CC-BY-NC-SA
       <include name="centered" displayName="Centered Artwork (Multiple Logos)" />
       <include name="centered-one-logo" displayName="Centered Artwork (Single Logo)" />
    </subset>
+   :default
+   <!--
+   ///
+   Subset: Scroll sound
+   ///
+   -->
+   <subset name="scroll-sound" displayName="Scroll sound">
+      <include name="default" displayName="Default" />
+      <include name="alt" displayName="Alt" />
+      <include name="custom" displayName="Custom" />
+   </subset>
 
    <!--
    ///
@@ -191,7 +202,9 @@ license:       creative commons CC-BY-NC-SA
          <scaledLogoSpacing>0.4</scaledLogoSpacing>
          <maxLogoCount>4</maxLogoCount>
          <maxLogoCount ifSubset="system-view-style:centered-one-logo">1</maxLogoCount>
-         <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
+         <scrollSound ifSubset="scroll-sound:default">./_inc/sounds/scroll_1.wav</scrollSound>
+         <scrollSound ifSubset="scroll-sound:alt">./_inc/sounds/scroll_2.wav</scrollSound>
+         <scrollSound ifSubset="scroll-sound:custom">${themeCustomizationsPath}scroll.wav</scrollSound>
          <defaultTransition>instant</defaultTransition>
       </carousel>
       <!-- Game Count: enabled -->
@@ -246,7 +259,9 @@ license:       creative commons CC-BY-NC-SA
          <selectedColor>${gamelistListTextlistSelectedColor}</selectedColor>
          <primaryColor>${gamelistListTextlistUnselectedColor}</primaryColor>
          <secondaryColor>${gamelistListTextlistUnselectedColor}</secondaryColor>
-         <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
+         <scrollSound ifSubset="scroll-sound:default">./_inc/sounds/scroll_1.wav</scrollSound>
+         <scrollSound ifSubset="scroll-sound:alt">./_inc/sounds/scroll_2.wav</scrollSound>
+         <scrollSound ifSubset="scroll-sound:custom">${themeCustomizationsPath}scroll.wav</scrollSound>
          <zIndex>5</zIndex>
       </textlist>
       <image name="gamelist-background" extra="true">
