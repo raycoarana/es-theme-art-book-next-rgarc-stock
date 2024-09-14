@@ -1,0 +1,198 @@
+<theme>
+   <formatVersion>7</formatVersion>
+   <view name="screen">
+      <batteryIndicator name="batteryIndicator">
+         <pos>0 0.0125</pos><!-- 0 8 -->
+         <size>1 0.05</size><!-- 640 32 -->
+         <itemSpacing>0.0125</itemSpacing>
+         <horizontalAlignment>right</horizontalAlignment>
+      </batteryIndicator>
+      <text name="clock">
+         <pos>0.0125 0.0125</pos><!-- 8 8 -->
+         <size>0.4 0.05</size>
+         <textColor>eeeeee77</textColor>
+         <fontSize>0.03</fontSize>
+         <alignment>left</alignment>
+         <verticalAlignment>center</verticalAlignment>
+         <color>ffffff</color>
+      </text>
+   </view>
+
+   <view name="system,basic,detailed,video">
+      <helpsystem name="help">
+         <textColor>ffffff99</textColor>
+         <iconColor>ffffff99</iconColor>
+         <origin>0.5 1</origin>
+         <pos>0.5 0.9875</pos>
+         <fontSize>0.023333333333333</fontSize>
+      </helpsystem>
+   </view>
+
+   <view name="system">
+      <text name="logoText">
+         <fontSize>0.0875</fontSize><!-- 42 -->
+      </text>
+      <carousel name="systemcarousel">
+         <logoScale>1.3</logoScale>
+         <logoSize>1 1.06</logoSize>
+         <scaledLogoSpacing>0.4</scaledLogoSpacing>
+      </carousel>
+      <image name="syslogo" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <maxSize>0.7 0.5</maxSize>
+         <zIndex>50</zIndex>
+         <color>${systemLogoColor}</color>
+         <path>./_inc/systems/${system.theme}.svg</path>
+      </image>
+      <text name="systemInfo">
+         <zIndex>44</zIndex>       
+         <pos>0.0 0.8</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>ffffff</color>
+	      <fontSize>0.04</fontSize>
+         <zIndex>44</zIndex>
+      </text>
+   </view>
+
+   <view name="basic,detailed,video">
+      <image name="logo">
+         <maxSize>0.359375 0.104166666666667</maxSize><!-- 230 50 -->
+      </image>
+      <text name="logoText">
+         <size>0.359375 0.104166666666667</size><!-- 230 50 -->
+         <fontSize>0.05</fontSize>
+      </text>
+      <textlist name="gamelist">
+         <fontSize>0.032</fontSize><!-- 19 -->
+         <lineSpacing>1.5125</lineSpacing>
+      </textlist>
+   </view>
+
+   <view name="basic">
+      <image name="logo">
+         <pos>0.5 0.11875</pos><!-- 50% 55 -->
+      </image>
+      <text name="logoText">
+         <pos>0.5 0.11875</pos><!-- 50% 55 -->
+      </text>
+      <textlist name="gamelist">
+         <pos>0.5 0.229166666666667</pos><!-- 50% 110 -->
+         <size>0.84375 0.725</size><!-- 540 348 -->
+      </textlist>
+   </view>
+
+   <view name="detailed,video">
+      <image name="logo">
+         <pos>0.25 0.13875</pos><!-- 160 55 -->
+      </image>
+      <text name="logoText">
+         <pos>0.25 0.13875</pos><!-- 160 55 -->
+      </text>
+      <textlist name="gamelist">
+         <origin>0 0</origin>
+         <pos>0.0125 0.229166666666667</pos><!-- 35 110 -->
+         <size>0.475 0.725</size><!-- 240 348 -->
+      </textlist>
+      <image name="gamelist-background" extra="true">
+         <size>0.5 1</size><!-- 320 480 -->
+      </image>
+      <rating name="md_rating">
+         <origin>0 0.5</origin>
+         <pos>0.5125 0.608333333333334</pos><!-- 328 282 -->
+         <size>0 0.041666666666667</size><!-- x 20 -->
+      </rating>
+      <image name="md_releasedate_icon">
+         <origin>0 0.5</origin>
+         <pos>0.782777777777778 0.608333333333334</pos><!-- 470 282 -->
+         <size>0.027777777777778 0.041666666666667</size><!-- 20 20 -->
+      </image>
+      <datetime name="md_releasedate">
+         <origin>0 0.5</origin>
+         <pos>0.82 0.608333333333334</pos>
+         <size>0.166666666666667 0.041666666666667</size><!-- 120 20 -->
+         <fontSize>0.019166666666667</fontSize><!-- 14 -->
+         <alignment>left</alignment>
+      </datetime>
+      <image name="md_gametime_icon">
+         <pos>0.784166666666667 0.65</pos>
+         <maxSize>0.020833333333333 0.033333333333333</maxSize><!-- 40 40 -->
+      </image>
+      <text name="md_gametime">
+         <pos>0.82 0.65</pos>
+         <size>0.205 0.041666666666667</size>
+         <fontSize>0.019166666666667</fontSize>
+         <alignment>left</alignment>
+      </text>
+      <image name="md_genre_icon">
+         <pos>0.5125 0.65</pos>
+         <maxSize>0.020833333333333 0.033333333333333</maxSize><!-- 40 40 -->
+      </image>
+      <text name="md_genre">
+         <pos>0.54 0.65</pos>
+         <size>0.205 0.041666666666667</size>
+         <fontSize>0.019166666666667</fontSize><!-- 28 -->
+      </text>
+      <text name="md_description">
+         <pos>0.5125 0.683333333333334</pos><!-- 328 380 -->
+         <size>0.475 0.25375</size><!-- 260 78 -->
+         <fontSize>0.023333333333333</fontSize><!-- 16 -->
+         <lineSpacing>1.22</lineSpacing>
+      </text>
+      <image name="game-metadata-background" extra="true">
+         <origin>0 1</origin>
+         <pos>0.5 1</pos><!-- 320 0 -->
+         <size>0.5 1</size><!-- 320 170-->
+         <zIndex>3</zIndex>
+      </image>
+      <image name="crt-screen" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.75 0.325</pos>
+         <maxSize>0.43 0.437199</maxSize>
+         <path>./_inc/images/crt-screen.svg</path>
+         <zIndex>4</zIndex>
+      </image>
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.75 0.325</pos>
+         <maxSize>0.43 0.437199</maxSize>
+         <zIndex>5</zIndex>
+         <delay>0.5</delay>
+         <effect>none</effect>
+         <default>./_inc/videos/static.mp4</default>
+         <showSnapshotDelay>false</showSnapshotDelay>
+         <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      </video>
+      <video name="md_video_extra" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0 0</pos>
+         <maxSize>0.43 0.437199</maxSize>
+         <zIndex>9</zIndex>
+         <delay>0.5</delay>
+         <effect>none</effect>
+         <path>./_inc/videos/static.mp4</path>
+         <showSnapshotDelay>false</showSnapshotDelay>
+         <showSnapshotNoVideo>true</showSnapshotNoVideo>
+         <visible>true</visible>
+      </video>
+      <image name="crt-bezel" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.75 0.325</pos>
+         <maxSize>0.45625 0.4638888888888889</maxSize>
+         <path>./_inc/images/crt-bezel.svg</path>
+         <zIndex>6</zIndex>
+      </image>
+      <image name="md_image">
+         <origin>0 1</origin>
+         <pos>0.5125 0.5625</pos>
+         <maxSize>0.25 0.25</maxSize>
+         <zIndex>7</zIndex>
+      </image>
+      <image name="md_marquee">
+         <origin>1 1</origin>
+         <pos>0.975 0.5625</pos><!-- 480 240 -->
+         <maxSize>0.125 0.125</maxSize>
+         <zIndex>7</zIndex>
+      </image>
+   </view>
+</theme>
