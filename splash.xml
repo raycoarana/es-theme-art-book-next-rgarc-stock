@@ -27,11 +27,12 @@
       </image>
       <image ifSubset="splash-screen:default" name="background">
          <origin>0 0</origin>
-         <pos>1 1</pos>
+         <pos>0 0</pos>
+         <path>./_inc/images/splash.png</path>
       </image>
       <image name="progressbar">
          <origin>0.5 0.5</origin>
-         <pos>0.5 0.5</pos>
+         <pos>0.5 0.75</pos>
          <color>${splashProgressBarColor}</color>
          <colorEnd>${splashProgressBarColorEnd}</colorEnd>
       </image>
@@ -41,10 +42,10 @@
       </image>
       <text name="label">
          <origin>0.5 0.5</origin>
-         <pos>0.5 0.6</pos>
+         <pos>0.5 0.8</pos>
          <alignment>center</alignment>
          <fontPath>./_inc/fonts/Oxygen-Bold.ttf</fontPath>
-         <fontSize>0.04</fontSize>
+         <fontSize>0.03</fontSize>
          <color>${splashProgressBarTextColor}</color>
          <forceUppercase>true</forceUppercase>
       </text>

@@ -23,8 +23,18 @@ license:       creative commons CC-BY-NC-SA
    ///
    -->
    <subset name="system-count" displayName="System Count">
-      <include name="off" displayName="Off" />
       <include name="on" displayName="On" />
+      <include name="off" displayName="Off" />
+   </subset>
+
+   <!--
+   ///
+   Subset: Show Help (Stock firmware don't allow show/hide)
+   ///
+   -->
+   <subset name="show-help" displayName="Show help">
+      <include name="on" displayName="On" />
+      <include name="off" displayName="Off" />
    </subset>
 
    <!-- Color Scheme -->
@@ -66,6 +76,21 @@ license:       creative commons CC-BY-NC-SA
       <include name="off" displayName="Off" />
       <include name="on" displayName="On" />
    </subset>
+
+
+   <!-- Help -->
+   <view name="system,basic,detailed,video">
+      <helpsystem name="help" ifSubset="show-help:on">
+         <textColor>ffffff99</textColor>
+         <iconColor>ffffff99</iconColor>
+         <origin>0.5 1</origin>
+         <pos>0.5 0.9875</pos>
+         <fontSize>0.023333333333333</fontSize>
+      </helpsystem>
+      <helpsystem name="help" ifSubset="show-help:off">
+         <pos>1 1</pos>
+      </helpsystem>
+   </view>
 
    <view name="screen">
       <controllerActivity name="controllerActivity">
@@ -135,7 +160,16 @@ license:       creative commons CC-BY-NC-SA
          <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
          <defaultTransition>instant</defaultTransition>
       </carousel>
-      <text name="systemInfo">
+      <!-- Game Count: enabled -->
+      <text name="systemInfo" ifSubset="system-count:on">
+         <pos>0.0 0.8</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>ffffff</color>
+	      <fontSize>0.04</fontSize>
+         <zIndex>44</zIndex>
+      </text>
+      <!-- Game Count: disabled -->
+      <text name="systemInfo" ifSubset="system-count:off">
          <pos>1 1</pos>
       </text>
       <image ifSubset="system-view-style:centered|centered-one-logo" name="system-art-fade" extra="true">

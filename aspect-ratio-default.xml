@@ -18,16 +18,6 @@
       </text>
    </view>
 
-   <view name="system,basic,detailed,video">
-      <helpsystem name="help">
-         <textColor>ffffff99</textColor>
-         <iconColor>ffffff99</iconColor>
-         <origin>0.5 1</origin>
-         <pos>0.5 0.9875</pos>
-         <fontSize>0.023333333333333</fontSize>
-      </helpsystem>
-   </view>
-
    <view name="system">
       <text name="logoText">
          <fontSize>0.0875</fontSize><!-- 42 -->
@@ -45,14 +35,6 @@
          <color>${systemLogoColor}</color>
          <path>./_inc/systems/${system.theme}.svg</path>
       </image>
-      <text name="systemInfo">
-         <zIndex>44</zIndex>       
-         <pos>0.0 0.8</pos>
-         <backgroundColor>00000000</backgroundColor>
-         <color>ffffff</color>
-	      <fontSize>0.04</fontSize>
-         <zIndex>44</zIndex>
-      </text>
    </view>
 
    <view name="basic,detailed,video">
