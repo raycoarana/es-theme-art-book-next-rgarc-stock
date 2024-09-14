@@ -6,6 +6,11 @@ This is a simplified port for the Stock Firmware of the RG ARC S (V12), making t
 
 In order to have a proper display of the Theme, you will have to disable grouping in Retroarch and selected Emulators.
 
+## Preview
+| ![system view single](_inc/systems_single.jpg) | ![gamelist multi](_inc/systems.jpg) |
+| -- | -- |
+| ![gamelist](_inc/gamelist.jpg) |  |
+
 ## Instructions
 
 To install this:
@@ -28,7 +33,7 @@ rsync --progress --exclude='.*' -avhe ssh --delete ./ root@[IPADDRESS]:/userdata
 ```
 If you just want to just restart EmulationStation remotely:
 ```bash
-ssh root@[IPADDRESS/HOSTNAME_OF_DEVICE] -f "/etc/init.d/S31emulationstation restart"
+ssh root@[IPADDRESS] -f "/etc/init.d/S31emulationstation restart"
 ```
 
 ### **Acknowledgments**

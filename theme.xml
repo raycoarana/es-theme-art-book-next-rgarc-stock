@@ -13,8 +13,19 @@ license:       creative commons CC-BY-NC-SA
       <fontRegular>./_inc/fonts/Oxygen-Regular.ttf</fontRegular>
       <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
       <spacerImage>./_inc/images/space.png</spacerImage>
-      <themeCustomizationsPath>./resources/customizations/art-book-next/</themeCustomizationsPath>
+      <distributionPath>/userdata/roms/anbernic/</distributionPath>
+      <themeCustomizationsPath>${distributionPath}theme-customizations/art-book-next-rgarc-stock/</themeCustomizationsPath>
    </variables>
+
+   <!--
+   ///
+   Subset: System Count
+   ///
+   -->
+   <subset name="system-count" displayName="System Count">
+      <include name="off" displayName="Off" />
+      <include name="on" displayName="On" />
+   </subset>
 
    <!-- Color Scheme -->
    <include>./colors.xml</include>
@@ -38,6 +49,16 @@ license:       creative commons CC-BY-NC-SA
    <subset name="system-view-style" displayName="System View: Style">
       <include name="centered" displayName="Centered Artwork (Multiple Logos)" />
       <include name="centered-one-logo" displayName="Centered Artwork (Single Logo)" />
+   </subset>
+
+   <!--
+   ///
+   Subset: Splash Screen
+   ///
+   -->
+   <subset name="splash-screen" displayName="Splash Screen">
+      <include name="default" displayName="Default" />
+      <include name="custom" displayName="Custom" />
    </subset>
 
    <!-- Gamelist View Loop Video -->

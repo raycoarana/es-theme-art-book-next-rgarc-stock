@@ -28,6 +28,13 @@
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>111111</statusBarBackgroundColor>
       <statusBarIconColor>eeeeee</statusBarIconColor>
+      <!-- Splash Screen -->
+      <splashBackgroundColor>000000</splashBackgroundColor>
+      <splashProgressBarColor>222222</splashProgressBarColor>
+      <splashProgressBarColorEnd>222222</splashProgressBarColorEnd>
+      <splashProgressBarActiveColor>333333</splashProgressBarActiveColor>
+      <splashProgressBarActiveColorEnd>333333</splashProgressBarActiveColorEnd>
+      <splashProgressBarTextColor>ffffff</splashProgressBarTextColor>
    </variables>
    <variables ifSubset="color-scheme:art-book">
       <backgroundColor>000000</backgroundColor>
