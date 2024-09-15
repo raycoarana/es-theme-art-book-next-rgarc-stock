@@ -17,7 +17,7 @@ To install this:
 - Go to https://github.com/raycoarana/es-theme-art-book-next-rgarc-stock, click on Code -> Download ZIP
 - Extract that zip out, there is a folder named `es-theme-art-book-next-rgarc-stock`.
 - Either via direct copy to the games sdcard, SSH or Samba, copy `es-theme-art-book-next-rgarc-stock` to `anbernic/themes/`. SSH recommended as we need the it for the next step.
-- Disable Retroarch, Emulators and Apps groups by editing the /userdata/system/configs/emulationstation/es_settings.cfg. You can do this by either Samba or SSH and edit the config bools for Apps, Emulators and Retroarch to `true`.
+- Disable Retroarch, Emulators and Apps groups by editing the `/userdata/system/configs/emulationstation/es_settings.cfg`. You can do this by either Samba or SSH and edit the config bools for Apps, Emulators and Retroarch to `true`.
 - Restart EmulationStation by running `/etc/init.d/S31emulationstation restart`.
 - Enable the theme via EmulationStation settings (Start button) > UI Settings > `es-theme-art-book-next-rgarc-stock`
 - Persist the changes to your es_systems.xml executing `anbernic-save-overlay`.
